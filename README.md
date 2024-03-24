@@ -18,10 +18,16 @@
 2.5?. HTTPServlet
     서블릿 은 HTTP 문자열을 일일히 파싱하는 노력을 덜어주기 위해 사용
     그리고 쓰레드풀을 이용해 많은 요청도 안정적으로 처리한다.(HTTPServer도 쓰레드풀을 이용 할까?)
-    
-
+    HTTPServer은 Handler를 각각 만들어주지만 HttpServlet은 톰캣을 미들웨어로 장착해 매핑을 web.xml파일에서 작성만해주면 톰캣이 알아서 클래스를 호출해준다.
 
 3. spring boot
 
-
 *. tomcat은 뭘까
+    클라이언트와 서버 사이에서 매개체 역할을 하는 프로그램
+
+*. 인스턴스에 toString하면 대부분 sun.net.httpserver.PlaceholderOutputStream@1fe0abd0 이렇게 인스턴스 자체를 설명함
+
+*. 소캣 열때 주소기준은?
+    IP에는 공인, 사설이 있다. 공인은 전세계에서 접속 가능한 IP, 사설은 접속이 불가능하다.
+    0.0.0.0은 로컬호스트를 뜻하는 것 같다.
+    
